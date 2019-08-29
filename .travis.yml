@@ -1,0 +1,30 @@
+language: rust
+
+os:
+- osx
+
+rust:
+- nightly
+
+cache: cargo
+
+addons:
+  homebrew:
+    packages:
+    - libffi
+    - gnutls
+    - gstreamer
+    - gst-plugins-base
+    - gst-libav
+    - gst-plugins-bad
+    - gst-plugins-good
+    - gst-plugins-ugly
+    - gst-rtsp-server
+    - gst-editing-services
+
+branches:
+  only:
+  - master
+
+script:
+- cargo build --release

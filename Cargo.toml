@@ -1,0 +1,24 @@
+[package]
+name = "libservo"
+version = "0.1.0"
+authors = ["Aliaksei Syrel <alex.syrel@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+libc = "0.2.62"
+glutin = "0.22.0-alpha3"
+
+[dependencies.libservo]
+git = "https://github.com/servo/servo"
+rev = "39bd45529d6ef3eea8e0eeef77d0294e0db1b02c"
+features = ["canvas2d-azure", "layout-2020", "native-bluetooth"]
+
+[lib]
+name = "Servo"
+crate-type = ["cdylib"]
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
