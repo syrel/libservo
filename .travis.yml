@@ -11,6 +11,7 @@ cache: cargo
 addons:
   homebrew:
     packages:
+    - glib
     - libffi
     - gnutls
     - gstreamer
