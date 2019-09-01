@@ -14,6 +14,8 @@ rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49"
 features = ["canvas2d-azure", "layout-2020" ]
 
 [patch.'https://github.com/servo/media']
+servo-media = { git = "https://github.com/syrel/media", rev = "c680fa4b0064a7e8b877c8ab5ee8f98ce33132b0" }
+servo-media-dummy = { git = "https://github.com/syrel/media", rev = "c680fa4b0064a7e8b877c8ab5ee8f98ce33132b0" }
 servo-media-gstreamer = { git = "https://github.com/syrel/media", rev = "c680fa4b0064a7e8b877c8ab5ee8f98ce33132b0" }
 
 [patch.'https://github.com/servo/devices']
