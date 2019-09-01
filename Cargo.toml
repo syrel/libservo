@@ -10,8 +10,14 @@ glutin = "0.22.0-alpha3"
 
 [dependencies.libservo]
 git = "https://github.com/servo/servo"
-rev = "39bd45529d6ef3eea8e0eeef77d0294e0db1b02c"
-features = ["canvas2d-azure", "layout-2020", "native-bluetooth"]
+rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49"
+features = ["canvas2d-azure", "layout-2020" ]
+
+[patch.'https://github.com/servo/media']
+servo-media-gstreamer = { git = "https://github.com/syrel/media", rev = "c680fa4b0064a7e8b877c8ab5ee8f98ce33132b0" }
+
+[patch.'https://github.com/servo/devices']
+device = { git = "https://github.com/syrel/devices", rev = "d6c62e0873b2ec9a68c97a3370667e8b9a879cf4" }
 
 [lib]
 name = "Servo"
