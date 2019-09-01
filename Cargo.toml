@@ -7,11 +7,19 @@ edition = "2018"
 [dependencies]
 libc = "0.2.62"
 glutin = "0.22.0-alpha3"
+gleam = "0.6.20"
+glium = "0.26.0-alpha3"
+euclid = "0.20.1"
+boxer = { git = "https://github.com/syrel/rust-boxer" }
 
-[dependencies.libservo]
-git = "https://github.com/servo/servo"
-rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49"
-features = ["canvas2d-azure", "layout-2020" ]
+libservo = { git = "https://github.com/servo/servo", rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49", features = ["canvas2d-azure", "layout-2020" ] }
+embedder_traits = { git = "https://github.com/servo/servo", rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49" }
+compositing = { git = "https://github.com/servo/servo", rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49" }
+webvr = { git = "https://github.com/servo/servo", rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49" }
+webxr-api = { git = "https://github.com/servo/webxr" }
+webrender_api = { git = "https://github.com/servo/webrender" }
+servo_geometry = { git = "https://github.com/servo/servo", rev = "6a4e6174a7287f769737ae7f588bc74fdf93bc49" }
+servo-media = { git = "https://github.com/syrel/media", rev = "c680fa4b0064a7e8b877c8ab5ee8f98ce33132b0" }
 
 [patch.'https://github.com/servo/media']
 servo-media = { git = "https://github.com/syrel/media", rev = "c680fa4b0064a7e8b877c8ab5ee8f98ce33132b0" }
